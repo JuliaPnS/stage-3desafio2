@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Staatliches', cursive;
+    font-weight: 400;
+}
+
+:root {
+    --bc-heading: #8E9AAF;
+    --bc-page: #EFF1FF;
+
+    font-size: 62.5%;
+}
+/*
+body::before {
+    content: '';
+    width: 100%;
+    height: 30rem;
+
+    position: absolute;
+    top: 0;
+
+    z-index: -1;
+
+    background-color: var(--bc-heading);
+}
+*/
+
+body {
+    background: var(--bc-page);
+}
+
+.page {  
+    margin: 0 auto;
+    text-align: center;
+}   
+
+
+
+header {
+    background-color: var(--bc-heading);
+    width: 100%;
+    height: 30rem;
+
+}
+
+header img {
+    margin: 3.2rem 1.24rem;
+}
+
+h1 {
+    background: #CBC0D3;
+    width: 100vw;
+    
+    color: #FFFFFF;
+    text-transform: uppercase;
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25);
+
+    font-size: 4rem;
+    line-height: 3.4rem;
+
+    padding: 0.8rem 8.6rem;
+}
+
+.subheader, main {
+    
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.subheader {
+    margin: 1.5rem 0;
+}
+
+.subheader p {
+    margin: 1.4rem 0 6.3rem;
+
+    font-family: 'Palanquin', sans-serif;
+    font-size: 2rem;
+    line-height: 2.5rem;
+
+    width: 30.5rem;
+
+}
+
+main {
+    margin-top: 15rem;
+}
+
+.card {
+   position: relative;
+}
+
+.card h2 {
+    position: absolute;
+
+    margin: 1.6rem 1.6rem 0 19.2rem;
+
+    font-size: 2rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+
+    padding: 0 2.4rem;
+    width: fit-content;
+
+    color: #4A4E69;
+    background: #FEEAFA;
+
+    border-radius: 2rem;
+
+    animation: topdown 850ms 450ms backwards;
+
+    z-index: 1;
+}
+
+.card img {
+    animation: downtop 600ms;
+    transition: transform 250ms;
+
+    object-fit: cover;
+    width: 100%;
+    height: auto;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+a {
+    margin-top: 9rem;
+    text-decoration: none;
+    color: #4A4E69;
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+}
+
+a span:hover {
+    font-weight: bolder;
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: 0;
+    }
+}
+
+@media (max-width: 370px) {
+
+    h1 {
+        font-size: 3.20rem;
+    }
+
+    .card h2 {
+        margin: 1.6rem 1.6rem 0 12.2rem;
+    }
+
+   main {
+    padding: 0 3.6rem 6rem;
+   }
+}
+
+@media (max-width: 770px) {
+
+    .card + .card {
+        margin-top: 3.6rem;
+     }
+}

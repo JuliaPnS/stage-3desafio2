@@ -1,0 +1,72 @@
+.page {
+    display: grid;
+    grid-template-areas: "A B";
+    /* grid-auto-columns: 1fr 3fr; */
+    grid-auto-columns: auto 1fr;
+
+}
+
+   .page header {
+        grid-area: A;
+    
+    }
+    
+    .page main {
+        grid-area: B;
+    
+    }
+
+header {
+    display: flex;
+    flex-direction: column;
+
+    width: 37.7rem;
+
+    background-color: var(--bc-heading);
+    height: 100vh;
+}
+
+header h1 {
+    width: 37.7rem;
+}
+
+.subheader p {
+    margin-top: 3.2rem;
+    color:white
+}
+
+main {
+    display: grid;
+    
+    /* grid-template-areas: "A B" "D C"; */
+    grid-template-areas: 
+        "A B"
+        "D B"
+        "D C";
+    gap: 3.2rem;
+
+    margin-top: 2.4rem;
+}
+main div:nth-child(1) {
+    grid-area: A;
+}
+
+main div:nth-child(2) {
+    grid-area: B;
+}
+
+main div:nth-child(3) {
+    grid-area: C;
+}
+
+main div:nth-child(4) {
+    grid-area: D;
+}
+
+.card img {
+    width: 30rem;
+}
+
+.card h2 {
+    margin: 1.6rem 1.6rem 0 18.2rem;
+}
